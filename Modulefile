@@ -1,0 +1,8 @@
+name    'dalen-hiera_psql'
+version '0.1.0'
+source 'http://github.com/dalen/hiera-psql'
+author 'Erik Dalén'
+license 'Apache License, Version 2.0'
+summary 'PostgreSQL back end for Hiera'
+description 'PostgreSQL back end for Hiera'
+project_page 'http://github.com/dalen/hiera-psql'

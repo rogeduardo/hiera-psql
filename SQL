@@ -1,0 +1,2 @@
+CREATE DATABASE hiera WITH owner=hiera template=template0 encoding='utf8';
+CREATE TABLE config (path varchar, key varchar, value varchar, UNIQUE(path,key));
