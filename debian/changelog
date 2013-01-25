@@ -1,0 +1,5 @@
+hiera-psql (0.1.0-1) UNRELEASED; urgency=low
+
+  * Initial packaging.
+
+ -- Pierre Carrier <pierre@gcarrier.fr>  Sun, 27 Jan 2013 03:11:35 +0000
