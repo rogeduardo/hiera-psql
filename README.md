@@ -39,3 +39,8 @@ Here is a example hiera config file.
         :user: root
         :password: examplepassword
 </code></pre>
+
+Dependencies
+============
+
+It reguires the 'pg' and 'json' ruby gems.
