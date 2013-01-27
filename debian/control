@@ -1,0 +1,17 @@
+Source: hiera-psql
+Section: ruby
+Priority: optional
+Maintainer: Erik Dalen <erik.gustav.dalen@gmail.com>
+DM-Upload-Allowed: yes
+Build-Depends: debhelper (>= 7.0.50~), gem2deb (>= 0.2.7~)
+Standards-Version: 3.9.2
+Homepage: http://github.com/dalen/hiera-psql
+XS-Ruby-Versions: all
+
+Package: hiera-psql
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ruby | ruby-interpreter,
+ hiera (>= 1.0), libpgsql-ruby, libjson-ruby
+Description: A PostgreSQL backend for Hiera.
+ Allows hiera functions to pull data from a PostgreSQL database.
