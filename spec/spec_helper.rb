@@ -18,5 +18,4 @@ RSpec.configure do |config|
   config.mock_with :rspec
 end
 
-require 'lib/hiera/backend/psql_backend'
-
+require 'hiera'
