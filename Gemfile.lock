@@ -1,0 +1,32 @@
+PATH
+  remote: .
+  specs:
+    hiera-psql (0.1.0)
+      hiera (~> 1.0)
+      json (~> 1.7)
+      pg (~> 0.15)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    diff-lcs (1.2.3)
+    hiera (1.2.0)
+      json_pure
+    json (1.7.7)
+    json_pure (1.7.7)
+    pg (0.15.1)
+    rspec (2.13.0)
+      rspec-core (~> 2.13.0)
+      rspec-expectations (~> 2.13.0)
+      rspec-mocks (~> 2.13.0)
+    rspec-core (2.13.1)
+    rspec-expectations (2.13.0)
+      diff-lcs (>= 1.1.3, < 2.0)
+    rspec-mocks (2.13.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  hiera-psql!
+  rspec (= 2.13)

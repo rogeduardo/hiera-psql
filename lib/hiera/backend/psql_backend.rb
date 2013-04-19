@@ -1,10 +1,10 @@
+require 'pg'
+require 'json'
+
 class Hiera
   module Backend
     class Psql_backend
       def initialize
-        require 'pg'
-        require 'json'
-
         Hiera.debug("Hiera PostgreSQL backend starting")
       end
 
@@ -21,12 +21,17 @@ class Hiera
             # places where the key is found.
             Hiera.debug("Found #{key} in #{source}")
 
+
+            entry = result.first
+            return nil unless result.first
+            new_answer = JSON.load(entry.values_at('value'))
+
+
             # for array resolution we just append to the array whatever
             # we find, we then goes onto the next file and keep adding to
             # the array
             #
             # for priority searches we break after the first found data item
-            new_answer = JSON.load(result.values_at('value').first)
             case resolution_type
             when :array
               raise Exception, "Hiera type mismatch: expected Array and got #{new_answer.class}" unless new_answer.kind_of? Array or new_answer.kind_of? String
