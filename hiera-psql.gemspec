@@ -1,7 +1,8 @@
 $:.unshift File.expand_path("../lib", __FILE__)
+require 'hiera/backend/psql_version'
 
 Gem::Specification.new do |s|
-  s.version = "0.1.0"
+  s.version = HieraBackends::PostgreSQL::VERSION
   s.name = "hiera-psql"
   s.email = "erik.gustav.dalen@gmail.com"
   s.authors = "Erik Dalén"
