@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mcourtois/hiera-psql.png)](https://travis-ci.org/mcourtois/hiera-psql)
+
 Database schema
 ===============
 
@@ -14,7 +16,10 @@ Example:
 | 'fqdn/bar.example.com' | 'class::array_param' | '[1, 2, 3]'
 | 'fqdn/baz.example.com' | 'class::hash_param'  | '{ "key1": "value1", "key2": 2 }'
 
-See the file SQL for the neccessary commands to create the database.
+SQL:
+
+    CREATE DATABASE hiera WITH owner=hiera template=template0 encoding='utf8';
+    CREATE TABLE config (path varchar, key varchar, value varchar, UNIQUE(path,key));
 
 Configuration
 =============
@@ -23,24 +28,17 @@ The backend configuration takes a connection hash that it sends directly to the 
 
 Here is a example hiera config file.
 
-<pre><code>
----
-:hierarchy:
-    - 'fqdn/%{fqdn}'
-    - common
-
-:backends:
-    - psql
-
-:psql:
-    :connection:
+    ---
+    :hierarchy:
+      - 'fqdn/%{fqdn}'
+      - common
+    
+    :backends:
+      - psql
+    
+    :psql:
+      :connection:
         :dbname: hiera
         :host: localhost
         :user: root
         :password: examplepassword
-</code></pre>
-
-Dependencies
-============
-
-It reguires the 'pg' and 'json' ruby gems.
