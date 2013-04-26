@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/mcourtois/hiera-psql.png)](https://travis-ci.org/mcourtois/hiera-psql)
+[![Build Status](https://travis-ci.org/dalen/hiera-psql.png)](https://travis-ci.org/dalen/hiera-psql)
 
 Database schema
 ===============
