@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.version = HieraBackends::PostgreSQL::VERSION
   s.name = "hiera-psql"
   s.email = "erik.gustav.dalen@gmail.com"
-  s.authors = "Erik Dalén"
+  s.authors = "Erik Dalen"
   s.summary = "A PostgreSQL backend for Hiera."
   s.description = "Allows hiera functions to pull data from a PostgreSQL database."
   s.has_rdoc = false
