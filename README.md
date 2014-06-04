@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/dalen/hiera-psql.png)](https://travis-ci.org/dalen/hiera-psql)
 
+This backend requires Postgresql 9.2 or later.
+
 Database schema
 ===============
 
@@ -9,17 +11,18 @@ value should contain the value in JSON format.
 
 Example:
 
-| path                   | key                  | value                   |
-|:-----------------------|:---------------------|:------------------------|
-| 'fqdn/foo.example.com' | 'class::num_param'   | '42'
-| 'fqdn/foo.example.com' | 'class::str_param'   | '"foobar"'
-| 'fqdn/bar.example.com' | 'class::array_param' | '[1, 2, 3]'
-| 'fqdn/baz.example.com' | 'class::hash_param'  | '{ "key1": "value1", "key2": 2 }'
+| path (varchar)         | value (json)         
+|:-----------------------|:---------------------------------------------------------
+| 'common'               | '{"class::common_param":"commonparamvalue"}'
+| 'fqdn/foo.example.com' | '{"class::num_param":42}'
+| 'fqdn/foo.example.com' | '{"class::str_param":"foobar"}'
+| 'fqdn/bar.example.com' | '{"class::array_param":"[1, 2, 3]"}'
+| 'fqdn/baz.example.com' | '{"class::hash_param":{"key1": "value1", "key2": 2}}'
 
 SQL:
 
     CREATE DATABASE hiera WITH owner=hiera template=template0 encoding='utf8';
-    CREATE TABLE config (path varchar, key varchar, value varchar, UNIQUE(path,key));
+    CREATE TABLE data (path varchar, value json, UNIQUE(path));
 
 Configuration
 =============
