@@ -16,7 +16,7 @@ Example:
 | 'common'               | '{"class::common_param":"commonparamvalue"}'
 | 'fqdn/foo.example.com' | '{"class::num_param":42}'
 | 'fqdn/foo.example.com' | '{"class::str_param":"foobar"}'
-| 'fqdn/bar.example.com' | '{"class::array_param":"[1, 2, 3]"}'
+| 'fqdn/bar.example.com' | '{"class::array_param":["value1", "value2", "value3"]}'
 | 'fqdn/baz.example.com' | '{"class::hash_param":{"key1": "value1", "key2": 2}}'
 
 SQL:
