@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/dalen/hiera-psql.png)](https://travis-ci.org/dalen/hiera-psql)
 
-This backend requires Postgresql 9.2 or later.
+This backend requires Postgresql 9.3 or later.
 
 Database schema
 ===============
