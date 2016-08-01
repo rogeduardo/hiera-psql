@@ -23,7 +23,7 @@ class Hiera
 
 
             entry = result.first
-            if entry
+            if entry and !answer
               new_answer = JSON.load(entry['value'])
 
               # for array resolution we just append to the array whatever
@@ -43,6 +43,7 @@ class Hiera
                 answer = Backend.merge_answer(new_answer,answer)
               else
                 answer = new_answer
+		return answer
                 break
               end
             end
