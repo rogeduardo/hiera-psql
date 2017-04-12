@@ -4,12 +4,12 @@ require 'hiera/backend/psql_version'
 Gem::Specification.new do |s|
   s.version = HieraBackends::PostgreSQL::VERSION
   s.name = "hiera-psql"
-  s.email = "erik.gustav.dalen@gmail.com"
-  s.authors = "Erik Dalen"
+  s.email = "rogeduardo@hotmail.com"
+  s.authors = "Rogerio Eduardo de Oliveira"
   s.summary = "A PostgreSQL backend for Hiera."
   s.description = "Allows hiera functions to pull data from a PostgreSQL database."
   s.has_rdoc = false
-  s.homepage = "http://github.com/dalen/hiera-psql"
+  s.homepage = "http://github.com/rogeduardo/hiera-psql"
   s.license = "Apache 2.0"
   s.files = Dir["lib/**/*.rb"]
   s.files += ["LICENSE"]
