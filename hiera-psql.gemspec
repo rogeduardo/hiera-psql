@@ -14,9 +14,10 @@ Gem::Specification.new do |s|
   s.files = Dir["lib/**/*.rb"]
   s.files += ["LICENSE"]
 
-  s.add_dependency 'hiera', '~> 1.0'
-  s.add_dependency 'pg', '~> 0.15'
-  s.add_dependency 'json', '~> 1.7'
+  s.add_dependency 'hiera', '1.2.1'
+  s.add_dependency 'pg', '0.15.1'
+  s.add_dependency 'json', '1.8.0'
+  s.add_dependency 'json_pure', '1.8.0'
 
   s.add_development_dependency 'rspec', '2.13'
 
